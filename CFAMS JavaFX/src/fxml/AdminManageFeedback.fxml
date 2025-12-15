@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="370.0" stylesheets="@../css/root.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminManageFeedbackController">
+   <top>
+      <AnchorPane prefHeight="67.0" prefWidth="370.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane layoutX="355.0" layoutY="-3.0" prefHeight="67.0" prefWidth="375.0" styleClass="headerContainer">
+               <children>
+                  <Label text="Manage Feedback">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="16.0" layoutY="60.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="headerRect3" width="1085.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="11.0" layoutY="59.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="headerRect2" width="1085.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="350.0">
+               <children>
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#goToDashboard" prefHeight="32.0" prefWidth="60.0" styleClass="redButton" text="&lt; Back">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Separator opacity="0.0" prefHeight="4.0" prefWidth="188.0" visible="false" />
+                  <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#refreshFeedback" prefHeight="25.0" prefWidth="91.0" styleClass="blueButton" text="Refresh">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="15.0" right="15.0" />
+               </VBox.margin>
+               <children>
+                  <TextField fx:id="searchTextField" prefHeight="25.0" prefWidth="275.0" promptText="Search" />
+                  <Button fx:id="searchButton" defaultButton="true" mnemonicParsing="false" onAction="#refreshFeedback" styleClass="blueButton" text="Search">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <VBox>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Search By:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <RadioButton fx:id="searchFeedbackIdRadio" mnemonicParsing="false" selected="true" text="Feedback Id">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="feedbackSearch" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="searchStudentIdRadio" mnemonicParsing="false" text="Student Id" toggleGroup="$feedbackSearch" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </HBox>
+                  <Label layoutX="10.0" layoutY="10.0" text="Sort By:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <RadioButton fx:id="sortFeedbackIdRadio" mnemonicParsing="false" onAction="#refreshFeedback" selected="true" text="Feedback Id">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="feedbackSort" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="sortVotesRadio" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onAction="#refreshFeedback" text="Votes" toggleGroup="$feedbackSort" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <TabPane fx:id="tabPane" style="-fx-border-color: #e1e1e1;">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" />
+               </VBox.margin>
+               <tabs>
+                  <Tab fx:id="unreviewedTab" closable="false" onSelectionChanged="#changeTab" text="Unreviewed">
+                     <content>
+                        <ScrollPane focusTraversable="false" hbarPolicy="NEVER" prefHeight="558.0" prefWidth="350.0">
+                           <content>
+                              <VBox fx:id="unreviewedCardContainer" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="539.0" prefWidth="317.0" />
+                           </content>
+                        </ScrollPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="reviewedTab" closable="false" onSelectionChanged="#changeTab" text="Reviewed">
+                     <content>
+                        <ScrollPane prefHeight="558.0" prefWidth="350.0">
+                           <content>
+                              <VBox fx:id="reviewedCardContainer" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="539.0" prefWidth="317.0" />
+                           </content>
+                        </ScrollPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="allTab" closable="false" onSelectionChanged="#changeTab" text="All">
+                     <content>
+                        <ScrollPane prefHeight="558.0" prefWidth="350.0">
+                           <content>
+                              <VBox fx:id="allCardContainer" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="539.0" prefWidth="317.0" />
+                           </content>
+                        </ScrollPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

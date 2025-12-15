@@ -1,0 +1,4 @@
+.loginContainer .loginButton{
+	-fx-background-color: ui-primary-blue;
+	-fx-text-fill: ui-white;
+}

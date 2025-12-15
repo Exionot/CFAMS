@@ -1,0 +1,149 @@
+.root{
+	ui-white: #F8F8FF;
+	ui-gray: #dfdfe6;
+	ui-black: #343231;
+	ui-primary-blue: #405280;
+	ui-secondary-blue: #53638d;
+	ui-primary-red: #a23535;
+	ui-secondary-red: #b55d5d;
+	ui-primary-yellow: #d8a52f;
+	ui-secondary-yellow: #e0b759;
+	
+	-fx-focus-color: ui-primary-blue;
+    -fx-faint-focus-color: transparent;
+}
+
+.headerContainer{
+	-fx-background-color: ui-primary-blue;
+	-fx-border-color: transparent;
+}
+
+.headerContainer .label{
+	-fx-text-fill: ui-white;
+}
+
+.headerRect1{
+	-fx-fill: ui-primary-blue;
+}
+
+.headerRect2{
+	-fx-fill: ui-primary-red;
+}
+
+.headerRect3{
+	-fx-fill: ui-primary-yellow;
+	
+}
+
+.redButton{
+	-fx-background-color: ui-primary-red;
+	-fx-text-fill: ui-white;
+	-fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.blueButton{
+	-fx-background-color: ui-primary-blue;
+	-fx-text-fill: ui-white;
+	-fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.yellowButton{
+	-fx-background-color: ui-primary-yellow;
+	-fx-text-fill: ui-white;
+	-fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.redButton:focused, .redButton:hover{
+	-fx-background-color: ui-secondary-red;
+}
+
+.yellowButton:focused, .yellowButton:hover{
+	-fx-background-color: ui-secondary-yellow;
+}
+
+.blueButton:focused, .blueButton:hover{
+	-fx-background-color: ui-secondary-blue;
+}
+
+.whiteButton{
+	-fx-background-color: ui-white;
+	-fx-text-fill: ui-black;
+	-fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.blackButton{
+	-fx-background-color: ui-black;
+	-fx-text-fill: ui-white;
+	-fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.whiteButton:focused, .whiteButton:hover{
+	-fx-background-color: ui-gray;
+}
+
+.sideMenu, .sideMenu .menuButton{
+	-fx-background-color: ui-secondary-blue;
+}
+
+.sideMenu .menuButton{
+	-fx-background-radius: 0px;
+	-fx-text-fill: ui-white;
+	-fx-alignment: CENTER_LEFT;
+}
+
+.sideMenu .menuButton:hover{
+	-fx-background-color: ui-primary-red;
+	-fx-translate-x: 10;
+	-fx-background-radius: 0 5 5 0;
+	-fx-font-weight: bold;
+	-fx-font-size: 14;
+}
+
+.buttonBg{
+	-fx-background-color: ui-primary-yellow;
+}
+
+.userProfileImageContainer{
+	-fx-border-width: 1;
+	-fx-border-color: ui-white;
+	-fx-background-radius: 10;
+	-fx-border-radius: 10;
+}
+
+.dialog-pane .button {
+    -fx-background-color: ui-white;
+    -fx-text-fill: ui-black;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-width: 2px;
+}
+
+.dialog-pane .button.ok-button {
+    -fx-border-color: ui-primary-blue;
+}
+
+.dialog-pane .button.cancel-button {
+	-fx-border-color: ui-primary-red;
+}
+
+.dialog-pane .button.ok-button:focused, .dialog-pane .button.ok-button:hover {
+    -fx-background-color: ui-primary-blue;
+    -fx-text-fill: ui-white;
+    -fx-font-weight: bold;
+}
+
+.dialog-pane .button.cancel-button:focused, .dialog-pane .button.cancel-button:hover {
+	-fx-background-color: ui-primary-red;
+	-fx-text-fill: ui-white;
+	-fx-font-weight: bold;
+}
+
+.root .scroll-pane:focused {
+    -fx-focus-color: #d3d3d3;
+    -fx-faint-focus-color: transparent;
+}

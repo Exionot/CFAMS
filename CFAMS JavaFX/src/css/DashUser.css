@@ -1,0 +1,42 @@
+.dashHeaderContainer{
+	-fx-background-color: ui-primary-blue;
+	-fx-border-color: transparent;
+}
+
+.dashHeaderContainer .label, .dashSideMenu .label{
+	-fx-text-fill: ui-white;
+}
+
+.dashSideMenu .separator{
+	-fx-background-color: ui-white;
+}
+
+.dashSideMenu, .dashSideMenu .menuButton{
+	-fx-background-color: ui-secondary-blue;
+}
+
+.dashSideMenu .menuButton{
+	-fx-background-radius: 0px;
+	-fx-text-fill: ui-white;
+	-fx-alignment: CENTER_LEFT;
+}
+
+.dashSideMenu .buttonBg{
+	-fx-background-color: ui-primary-yellow;
+}
+
+.dashSideMenu .menuButton:hover{
+	-fx-background-color: ui-primary-red;
+	-fx-translate-x: 10;
+	-fx-background-radius: 0 5 5 0;
+	-fx-font-weight: bold;
+	-fx-font-size: 14;
+}
+
+.dashSideMenu .logoutButton{
+	-fx-background-color: ui-primary-red;
+	-fx-text-fill: ui-white;
+	-fx-translate-x: 0;
+	-fx-background-radius: 5px;
+}
+

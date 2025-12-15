@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DashboardController">
+   <left>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="dashSideMenu" BorderPane.alignment="CENTER">
+         <center>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <StackPane styleClass="userProfileImageContainer">
+                           <children>
+                              <ImageView fx:id="userProfileImageContainer" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../../../Users/Matthew/Screenshots/Screenshot%202025-11-19%20212958.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </StackPane>
+                        <Label fx:id="userStudentIdLabel" text="25-0303">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="usernameLabel" layoutX="59.0" layoutY="105.0" text="Zack U. Alingalan" translateY="-5.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="userTypeLabel" layoutX="41.0" layoutY="127.0" text="User" translateY="-5.0">
+                           <font>
+                              <Font name="System Italic" size="13.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="userViewProfileButton" focusTraversable="false" mnemonicParsing="false" onAction="#showViewProfilePane" styleClass="whiteButton" text="View Profile">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <StackPane styleClass="buttonBg" VBox.vgrow="NEVER">
+                           <children>
+                              <Button fx:id="addFeedbackButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showAddFeedbackPane" prefHeight="37.0" prefWidth="205.0" styleClass="menuButton" text="Add Feedback">
+                                 <padding>
+                                    <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </StackPane>
+                        <StackPane styleClass="buttonBg" VBox.vgrow="NEVER">
+                           <children>
+                              <Button fx:id="viewFeedbackButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showViewFeedbackPane" prefHeight="37.0" prefWidth="205.0" styleClass="menuButton" text="View Feedbacks">
+                                 <padding>
+                                    <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </StackPane>
+                        <StackPane styleClass="buttonBg" VBox.vgrow="NEVER">
+                           <children>
+                              <Button fx:id="reviewFeedbackButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showReviewFeedbackPane" prefHeight="37.0" prefWidth="205.0" styleClass="menuButton" text="Review Feedback">
+                                 <padding>
+                                    <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </StackPane>
+                        <StackPane styleClass="buttonBg" VBox.vgrow="NEVER">
+                           <children>
+                              <Button fx:id="addUserButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showAddUserPane" prefHeight="37.0" prefWidth="205.0" styleClass="menuButton" text="Add User">
+                                 <padding>
+                                    <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="10.0" layoutY="127.0" styleClass="buttonBg">
+                           <children>
+                              <Button fx:id="analyticsButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showAnalyticsPane" prefHeight="37.0" prefWidth="205.0" styleClass="menuButton" text="Analytics">
+                                 <padding>
+                                    <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="10.0" layoutY="166.0" styleClass="buttonBg">
+                           <children>
+                              <Button fx:id="systemLogButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showLogPane" prefHeight="37.0" prefWidth="205.0" styleClass="menuButton" text="System Logs">
+                                 <padding>
+                                    <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </StackPane>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <Button mnemonicParsing="false" onAction="#logoutAttempt" prefHeight="36.0" prefWidth="205.0" styleClass="redButton" text="LOGOUT" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </BorderPane.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+         </bottom>
+      </BorderPane>
+   </left>
+   <stylesheets>
+      <URL value="@../css/DashUser.css" />
+      <URL value="@../css/root.css" />
+   </stylesheets>
+   <top>
+      <AnchorPane prefHeight="100.0" prefWidth="1080.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="109.0" prefWidth="1080.0" spacing="15.0" styleClass="dashHeaderContainer">
+               <children>
+                  <ImageView fx:id="iconImageVIew" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" />
+                  <Label fx:id="titleLabel" text="CFAMS - Campus Feedback And Managing System">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="50.0" right="50.0" />
+               </padding>
+            </HBox>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="16.0" layoutY="93.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="headerRect3" width="1080.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="11.0" layoutY="91.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="headerRect2" width="1080.0" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

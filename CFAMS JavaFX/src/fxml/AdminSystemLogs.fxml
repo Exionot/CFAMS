@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" stylesheets="@../css/root.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminSystemLogsController">
+   <top>
+      <AnchorPane prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="109.0" prefWidth="1080.0" spacing="15.0" styleClass="headerContainer">
+               <children>
+                  <Label text="System Logs">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="50.0" right="50.0" />
+               </padding>
+            </HBox>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="16.0" layoutY="95.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="headerRect3" width="1080.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="11.0" layoutY="92.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="headerRect2" width="1080.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#goBackToDashboard" styleClass="redButton" text="&lt; Back">
+                     <padding>
+                        <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </HBox>
+            <TextArea fx:id="logTextArea" editable="false" focusTraversable="false" maxHeight="1.7976931348623157E308" prefHeight="560.0" prefWidth="1050.0" text="[ERROR 12-02-2025 07:48:09] USER 'Zack U. Alingalan' tried to add new feedback&#10;[ACTION 12-02-2025 07:48:09] USER 'Zack U. Alingalan' added a new feedback" wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextArea>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

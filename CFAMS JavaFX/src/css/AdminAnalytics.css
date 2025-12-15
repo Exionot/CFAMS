@@ -1,0 +1,20 @@
+.received{
+	-fx-bar-fill: ui-primary-yellow;
+}
+
+.reviewed{
+	-fx-bar-fill: orange;
+}
+
+.confirmed{
+	-fx-bar-fill: green;
+}
+
+.invalid{
+	-fx-bar-fill: ui-primary-red;
+}
+
+.resolved{
+	-fx-bar-fill: ui-primary-blue;
+}
+
